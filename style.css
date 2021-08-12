@@ -1,0 +1,101 @@
+body {
+    background: black;
+    color: #eee;
+}
+a {
+    color: #aaf;
+}
+
+table {
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: collapse;
+}
+th {
+    background: #222;
+}
+th[data-column] {
+    cursor: pointer;
+}
+
+th, td {
+    height: 24px;
+    border: 1px solid #444;
+    padding: 0 4px;
+    white-space: nowrap;
+}
+
+.col-rank,
+.col-ilvl,
+.col-hps,
+.col-size {
+    text-align: right;
+}
+
+.name-block {
+    display: flex;
+}
+.col-name .name-part {
+    flex: 0.7;
+    min-width: 150px;
+    white-space: nowrap;
+}
+.col-name .guild-part {
+    font-size: 0.75em;
+    text-align: right;
+    flex: 1;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.col-duration,
+.col-trnk,
+.col-worldbuffs {
+    text-align: center;
+}
+
+.col-rank       { width: 40px; }
+.col-ilvl       { width: 25px; }
+.col-hps        { width: 75px; }
+.col-size       { width: 50px; }
+.col-date       { width: 85px; }
+.col-duration   { width: 60px; }
+.col-trnk       { width: 55px; }
+.col-worldbuffs { width: 195px; }
+.col-waited     { width: 50px; }
+
+.icon {
+    width: 18px;
+    height: 18px;
+    margin: 0 2px;
+    border: 1px solid #555555;
+}
+
+div.wowhead-tooltip {
+    pointer-events: none;
+    position: fixed;
+    visibility: visible;
+}
+.popup-image {
+    position: absolute;
+    margin-left:  -70px;
+    margin-top:  -6px;
+    border: 1px solid #555555;
+    border-radius: 4px;
+}
+
+@media (max-width: 1040px) {
+    .col-worldbuffs { display: none; }
+}
+@media (max-width: 670px) {
+    .col-waited { display: none; }
+}
+@media (max-width: 610px) {
+    .col-trnk { display: none; }
+}
+@media (max-width: 565px) {
+    .col-duration { display: none; }
+}
